@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-    
+<c:set var="root" value="${pageContext.request.contextPath }/"/>
     
 <!DOCTYPE html>
 <html>
@@ -63,11 +63,11 @@
             margin-right: 15px;
         }
 
-        .menu li:nth-child(4) a{
+        .menu li:nth-child(3) a{
             margin-right: 280px;
         }
 
-        .menu li:nth-child(5) a{
+        .menu li:nth-child(4) a{
             margin-right: 15px;
         }
 
@@ -118,13 +118,12 @@
 </head>
 <body>
     <div class="menu">
-        <ul>
-            <li><a href="../index.jsp" id="logo">PrologueEnd</a></li>
-            <li><a href="#">Lookbook</a></li>
-            <li><a href="list">Notice</a></li>
-            <li><a href="../about/about">About</a></li>
+                <ul>
+            <li><a href="${root }" id="logo">PrologueEnd</a></li>
+            <li><a href="${root }about/about">About</a></li>
+            <li><a href="${root }notice/list">Notice</a></li>
             <li><a href="#">Log in</a></li>
-            <li><a href="../membership/joinView" id="join">Join</a></li>        
+            <li><a href="${root }membership/joinView" id="join">Join</a></li>        
         </ul>
     </div>
     

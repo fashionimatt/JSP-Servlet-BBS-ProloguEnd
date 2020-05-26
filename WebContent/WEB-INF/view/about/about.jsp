@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="root" value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,11 +60,11 @@
             margin-right: 15px;
         }
 
-        .menu li:nth-child(4) a{
+        .menu li:nth-child(3) a{
             margin-right: 280px;
         }
 
-        .menu li:nth-child(5) a{
+        .menu li:nth-child(4) a{
             margin-right: 15px;
         }
 
@@ -147,12 +149,11 @@
    
     <div class="menu">
         <ul>
-            <li><a href="../index.jsp" id="logo">PrologueEnd</a></li>
-            <li><a href="#">Lookbook</a></li>
-            <li><a href="../notice/list">Notice</a></li>
-            <li><a href="about">About</a></li>
+            <li><a href="${root }" id="logo">PrologueEnd</a></li>
+            <li><a href="${root }about/about">About</a></li>
+            <li><a href="${root }notice/list">Notice</a></li>
             <li><a href="#">Log in</a></li>
-            <li><a href="../membership/joinView" id="join">Join</a></li>        
+            <li><a href="${root }membership/joinView" id="join">Join</a></li>        
         </ul>
     </div>
     

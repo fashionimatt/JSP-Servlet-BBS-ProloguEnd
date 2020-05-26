@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/index.jsp")
+@WebServlet(urlPatterns = {"/main", "/index.jsp"})
 public class MainController extends HttpServlet{
 
 	@Override

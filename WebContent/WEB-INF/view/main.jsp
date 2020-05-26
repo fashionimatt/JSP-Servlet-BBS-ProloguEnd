@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="root" value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,7 +88,7 @@
 	    
 	    .container-fluid{
 	        height: 325px;
-	        background-image: url(/imgs/navImg3.jpg);
+	        background-image: url(WebContent/imgs/navImg3.jpg);
 	        padding: 0px;
 	        margin: 0px;
 	    }
@@ -125,11 +127,11 @@
 <body>
 	    <div class="menu">
         <ul>
-            <li><a href="/main" id="logo">PrologueEnd</a></li>
-            <li><a href="about/about">About</a></li>
-            <li><a href="notice/list">Notice</a></li>
+            <li><a href="${root }" id="logo">PrologueEnd</a></li>
+            <li><a href="${root }about/about">About</a></li>
+            <li><a href="${root }notice/list">Notice</a></li>
             <li><a href="#">Log in</a></li>
-            <li><a href="membership/joinView" id="join">Join</a></li>        
+            <li><a href="${root }membership/joinView" id="join">Join</a></li>        
         </ul>
     </div>
     
