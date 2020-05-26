@@ -119,15 +119,8 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="menu">
-        <ul>
-            <li><a href="${root }" id="logo">PrologueEnd</a></li>
-            <li><a href="${root }about/about">About</a></li>
-            <li><a href="${root }notice/list">Notice</a></li>
-            <li><a href="#">Log in</a></li>
-            <li><a href="${root }membership/joinView" id="join">Join</a></li>        
-        </ul>
-    </div>
+
+    <c:import url="/WEB-INF/view/common/top_menu.jsp"/>
     
 	<div class="container" id="content">
 	<form action="UpdateController" method="post">
@@ -174,12 +167,9 @@
 	</form>
 		
 	</div>
-    
-  
 
-    <div class="footer">
-        <p>&copy;2020 PrologueEnd. All rights reserved.</p>
-    </div>
+    <c:import url="/WEB-INF/view/common/footer.jsp"/>
+    
 </body>
 </html>
 

@@ -149,15 +149,7 @@
 </head>
 <body>
    
-    <div class="menu">
-        <ul>
-            <li><a href="${root }" id="logo">PrologueEnd</a></li>
-            <li><a href="${root }about/about">About</a></li>
-            <li><a href="${root }notice/list">Notice</a></li>
-            <li><a href="#">Log in</a></li>
-            <li><a href="${root }membership/joinView" id="join">Join</a></li>        
-        </ul>
-    </div>
+    <c:import url="/WEB-INF/view/common/top_menu.jsp"/>
     
     <div class="container"> 
         <div id="mycarousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -176,9 +168,7 @@
           </div>
       </div>
       
-    <div class="footer">
-        <p>&copy;2020 PrologueEnd. All rights reserved.</p>
-    </div>
+    <c:import url="/WEB-INF/view/common/footer.jsp"/>
     
     <script>
 	    $('.carousel').carousel({
