@@ -159,7 +159,7 @@
 	    <c:import url="/WEB-INF/view/common/top_menu.jsp"/>
 	    
 	    <div class="container">
-			<form action="JoinController" method="post">
+			<form action="JoinProcController" method="post">
 				<h2>Join to communicate with fashion lovers!</h2>
 				<div class="field text-center">
 					<h3>Sign Up with Email</h3>
