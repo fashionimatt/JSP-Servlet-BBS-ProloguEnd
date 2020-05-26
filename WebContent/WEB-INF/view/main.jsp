@@ -88,7 +88,7 @@
 	    
 	    .container-fluid{
 	        height: 325px;
-	        background-image: url(WebContent/imgs/navImg3.jpg);
+	        background-image: url("imgs/navImg3.jpg");
 	        padding: 0px;
 	        margin: 0px;
 	    }
