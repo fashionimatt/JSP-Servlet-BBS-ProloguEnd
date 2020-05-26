@@ -78,12 +78,14 @@
         }
 
         .menu a:hover {
-            color : white;
-        }
-
-        #logo:hover{
-            color: lightgray;
-        }
+	        color : white;
+	        text-decoration : none;
+	    }
+	    
+	    #logo:hover{
+	        color: lightgray;
+	        text-decoration : none;
+	    }
         
         #mycarousel{
             width: 1000px;

@@ -81,13 +81,14 @@
         }
 
         .menu a:hover {
-            color : white;
-            text-decoration : none;
-        }
-
-        #logo:hover{
-            color: lightgray;
-        }
+	        color : white;
+	        text-decoration : none;
+	    }
+	    
+	    #logo:hover{
+	        color: lightgray;
+	        text-decoration : none;
+	    }
         
         .container{
             margin-top: 20px;
@@ -256,7 +257,7 @@
 		 	<div class="modal-dialog modal-dialog-centered" role="document">
 		 		<div class="modal-content">
 		 			<div class="modal-header">
-		 				<h4 class="modal-title" style="text-align:center">Example</h4>
+		 				<h4 class="modal-title" style="text-align:center">Warning</h4>
 		 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 		       		</div>
 		       		<div class="modal-body">
@@ -273,7 +274,7 @@
 		 	<div class="modal-dialog modal-dialog-centered" role="document">
 		 		<div class="modal-content">
 		 			<div class="modal-header">
-		 				<h4 class="modal-title" style="text-align:center">Example</h4>
+		 				<h4 class="modal-title" style="text-align:center">Warning</h4>
 		 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 		       		</div>
 		       		<div class="modal-body">

@@ -81,13 +81,14 @@
         }
 
         .menu a:hover {
-            color : white;
-            text-decoration : none;
-        }
-
-        #logo:hover{
-            color: lightgray;
-        }
+	        color : white;
+	        text-decoration : none;
+	    }
+	    
+	    #logo:hover{
+	        color: lightgray;
+	        text-decoration : none;
+	    }
         
         #content{
             margin-top: 20px;
