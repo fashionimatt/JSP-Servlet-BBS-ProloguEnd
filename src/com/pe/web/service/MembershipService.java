@@ -11,25 +11,22 @@ import com.pe.web.entity.Member;
 
 public class MembershipService {
 	
-	//È¸¿ø ÇÑ »ç¶÷¿¡ ´ëÇÑ Á¤º¸¸¦ ÀúÀåÇÏ´Â ¸Ş¼Òµå
+	//ìƒˆë¡œìš´ íšŒì›ì„ ë§Œë“ ë‹¤.
 	public void insertMember(Member member) {
 		
 		
 		String url = "jdbc:oracle:thin:@localhost:1521:harry";
-		//Äõ¸® ÁØºñ
+		
 		String sql = "insert into member values (member_seq.nextval,?,?,?,?)";
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			Connection conn = DriverManager.getConnection(url, "scott", "tiger");
-			//Äõ¸® ½ÇÇà °´Ã¼
 			PreparedStatement pstmt = conn.prepareStatement(sql);
-			//?¿¡ ´ëÀÔÇÒ ÀÚ·á ÀÔ·Â
 			pstmt.setString(1, member.getPassword());
 			pstmt.setString(2, member.getEmail());
 			pstmt.setString(3, member.getName());
 			pstmt.setString(4, member.getGender());
-			//Äõ¸® ½ÇÇà
 			pstmt.executeUpdate();
 			conn.close();
 		} catch (ClassNotFoundException e) {
@@ -39,22 +36,22 @@ public class MembershipService {
 		}
 	}
 	
-	//¸ğµç È¸¿øÀÇ Á¤º¸¸¦ °¡Á®¿À´Â ¸Ş¼Òµå
+	//íšŒì› ì •ë³´ë¥¼ ëª¨ë‘ ë¶ˆëŸ¬ì˜¨ë‹¤.
 	public Vector<Member> getAllMember(){
 		
-		//¸®ÅÏÅ¸ÀÔ ¼±¾ğ
+		//íšŒì›ì •ë³´ë¥¼ ë‹´ì„ Vector ìƒì„±
 		Vector<Member> vec = new Vector();
 		String url = "jdbc:oracle:thin:@localhost:1521:harry";
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			Connection conn = DriverManager.getConnection(url, "scott", "tiger");
-			//Äõ¸® ÁØºñ
+			//ï¿½ï¿½ï¿½ï¿½ ï¿½Øºï¿½
 			String sql = "select * from member order by accountnum";
-			//Äõ¸® ½ÇÇà °´Ã¼
+			//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼
 			PreparedStatement pstmt = conn.prepareStatement(sql);
-			//Äõ¸® ½ÇÇà ÈÄ °á°ú °¡Á®¿À±â
+			//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			ResultSet rs = pstmt.executeQuery();
-			//¹İº¹¹® µ¹¸é¼­ È¸¿ø Á¤º¸ ÀúÀå
+			//ï¿½İºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½é¼­ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			while(rs.next()) {
 				Member member = new Member();
 				member.setAccountnum(rs.getInt(1));

@@ -23,7 +23,6 @@ public class NoticeService {
 	}
 	
 	public List<Notice> getNoticeList(String field, String query, int page){
-	/*field¿¡´Â title,authorÀÌ µé¾î°¨! */
 		
 		List<Notice> list = new ArrayList<>();
 		
@@ -33,9 +32,9 @@ public class NoticeService {
 				"    )" + 
 				" WHERE NUM BETWEEN ? AND ?";
 
-		//10ÆäÀÌÁö¾¿ Ãâ·ÂÇÒ °ÍÀÌ¹Ç·Î ½ÃÀÛµÇ´Â ÆäÀÌÁö´Â 1,11,21,31....
-		//±×·¯¹Ç·Î an = 1+(page-1)*10
-		//³¡³ª´Â ÆäÀÌÁö´Â 10,20,30,40....
+		//10ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¹Ç·ï¿½ ï¿½ï¿½ï¿½ÛµÇ´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1,11,21,31....
+		//ï¿½×·ï¿½ï¿½Ç·ï¿½ an = 1+(page-1)*10
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 10,20,30,40....
 		//page*10
 		String url = "jdbc:oracle:thin:@localhost:1521:harry";
 		
@@ -283,11 +282,11 @@ public class NoticeService {
 		return notice;
 	}
 	
-	//ÇÏ³ªÀÇ °Ô½Ã±ÛÀ» ÀúÀåÇÏ´Â ¸Þ¼Òµå È£Ãâ
+	//ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼Òµï¿½ È£ï¿½ï¿½
 	public void insertNotice(Notice notice) {
 		String url = "jdbc:oracle:thin:@localhost:1521:harry";
 		try {
-			//Äõ¸® ÀÛ¼º
+			//ï¿½ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½
 			String sql = "insert into notice values (notice_seq.nextval,?,?,?,0,?,sysdate)";
 			
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -306,7 +305,7 @@ public class NoticeService {
 		}
 	}
 	
-	//Á¶È¸¼ö¸¦ Áõ°¡½ÃÅ°Áö ¾Ê´Â ÇÏ³ªÀÇ °Ô½Ã±ÛÀ» µ¹·Á¹Þ´Â ¸Þ¼Òµå È£Ãâ
+	//ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å°ï¿½ï¿½ ï¿½Ê´ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Þ´ï¿½ ï¿½Þ¼Òµï¿½ È£ï¿½ï¿½
 	public Notice getUpdateNotice(int id) {
 
 		Notice notice = null;
@@ -359,11 +358,11 @@ public class NoticeService {
 	
 	public void updateNotice(int id, String title, String content) {
 		
-		//DB¿¬°á
+		//DBï¿½ï¿½ï¿½ï¿½
 		String url = "jdbc:oracle:thin:@localhost:1521:harry";
 		
 		try {
-			//Äõ¸® ÀÛ¼º
+			//ï¿½ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½
 			String sql = "update notice set title=?,content=? where id=?";
 			
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -382,11 +381,11 @@ public class NoticeService {
 	}
 	
 	public void deleteNotice(int id) {
-		//DB¿¬°á
+		//DBï¿½ï¿½ï¿½ï¿½
 			String url = "jdbc:oracle:thin:@localhost:1521:harry";
 			
 			try {
-				//Äõ¸® ÀÛ¼º
+				//ï¿½ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½
 				String sql = "delete from notice where id=? ";
 				
 				Class.forName("oracle.jdbc.driver.OracleDriver");

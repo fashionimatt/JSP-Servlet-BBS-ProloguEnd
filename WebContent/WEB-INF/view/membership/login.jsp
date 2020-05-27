@@ -154,7 +154,7 @@
 	    <c:import url="/WEB-INF/view/common/top_menu.jsp"/>
 	    
 	    <div class="container">
-			<form action="LoginProcController" method="post">
+			<form action="LoginProc" method="post">
 				<div class="field text-center">
 					<h3>Log in</h3>
 					<p>Not a member? <a href="${root }membership/join">Create an account</a></p>
