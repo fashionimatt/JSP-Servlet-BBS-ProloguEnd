@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.pe.service.MembershipService;
+import com.pe.service.MemberService;
 
 @WebServlet("/membership/LoginProc")
 public class LoginProcController extends HttpServlet {
@@ -36,7 +36,7 @@ public class LoginProcController extends HttpServlet {
 		email = request.getParameter("email");
 		password = request.getParameter("password");
 		
-		MembershipService ms = new MembershipService();
+		MemberService ms = new MemberService();
 		
 		ms.loginMember(email, password, request, response);
 		

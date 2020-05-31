@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.pe.dao.Notice;
+import com.pe.bean.NoticeBean;
 import com.pe.service.NoticeService;
 
 @WebServlet("/notice/list")
@@ -52,7 +52,7 @@ public class ListController extends HttpServlet{
 		}
 		
 		NoticeService service = new NoticeService();
-		List<Notice> list = service.getNoticeList(field, query, page);
+		List<NoticeBean> list = service.getNoticeList(field, query, page);
 		
 		request.setAttribute("list", list);
 		

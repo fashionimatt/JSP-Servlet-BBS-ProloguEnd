@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.pe.dao.Notice;
+import com.pe.bean.NoticeBean;
 import com.pe.service.NoticeService;
 
 /**
@@ -33,7 +33,7 @@ public class UpdateController extends HttpServlet {
 		
 		//DB���� �ϳ��� �Խñۿ� ���� ������ �����޴� �޼ҵ� ȣ��
 		NoticeService service = new NoticeService();
-		Notice notice = service.getUpdateNotice(id);
+		NoticeBean notice = service.getUpdateNotice(id);
 		
 		//Request
 		request.setAttribute("notice", notice);

@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.pe.dao.Member;
-import com.pe.service.MembershipService;
+import com.pe.bean.MemberBean;
+import com.pe.service.MemberService;
 
 @WebServlet("/membership/JoinProcController")
 public class JoinProcController extends HttpServlet {
@@ -28,7 +28,7 @@ public class JoinProcController extends HttpServlet {
 		//�ѱ� ���� ���� ó��
 		request.setCharacterEncoding("utf-8");
 		
-		Member member = new Member();
+		MemberBean member = new MemberBean();
 		//����ڷκ��� �Ѿ�� ȸ������ ������ bean�� ��� ���� 
 		member.setName(request.getParameter("name"));
 		member.setEmail(request.getParameter("email"));
@@ -36,7 +36,7 @@ public class JoinProcController extends HttpServlet {
 		member.setGender(request.getParameter("gender"));
 		
 		//�����ͺ��̽� ��ü ���� �� ����
-		MembershipService service = new MembershipService();
+		MemberService service = new MemberService();
 		service.insertMember(member);
 
 		response.sendRedirect("JoinSuccess");

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.pe.dao.Notice;
+import com.pe.bean.NoticeBean;
 import com.pe.service.NoticeService;
 
 @WebServlet("/notice/WriteController")
@@ -26,7 +26,7 @@ public class WriteProcController extends HttpServlet {
 		//Bean���� ������ �о����
 		request.setCharacterEncoding("utf-8");
 		
-		Notice notice = new Notice();
+		NoticeBean notice = new NoticeBean();
 		notice.setTitle(request.getParameter("title"));
 		notice.setAuthor(request.getParameter("author"));
 		notice.setContent(request.getParameter("content"));

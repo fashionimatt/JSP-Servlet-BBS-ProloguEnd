@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.pe.dao.Member;
-import com.pe.service.MembershipService;
+import com.pe.bean.MemberBean;
+import com.pe.service.MemberService;
 
 @WebServlet("/Memberlist")
 public class MemberListController extends HttpServlet {
@@ -25,8 +25,8 @@ public class MemberListController extends HttpServlet {
 
 	protected void reqPro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//DB�� �����Ͽ� ȸ���� ��� ���� ��������
-		MembershipService service = new MembershipService();
-		Vector<Member> vec = service.getAllMember();
+		MemberService service = new MemberService();
+		Vector<MemberBean> vec = service.getAllMember();
 		
 		request.setAttribute("vec", vec);//���͸� jsp������ �ѱ�
 		

@@ -14,9 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.pe.dao.Member;
+import com.pe.bean.MemberBean;
 
-public class MembershipService {
+public class MemberService {
 	
 	Connection conn;
 	PreparedStatement pstmt;
@@ -67,7 +67,7 @@ public class MembershipService {
 	}
 	
 	//새로운 회원을 만든다.
-	public void insertMember(Member member) {
+	public void insertMember(MemberBean member) {
 		
 		
 		String sql = "insert into member values (member_seq.nextval,?,?,?,?)";
@@ -90,10 +90,10 @@ public class MembershipService {
 	}
 	
 	//회원 정보를 모두 불러온다.
-	public Vector<Member> getAllMember(){
+	public Vector<MemberBean> getAllMember(){
 		
 		//회원정보를 담을 Vector 생성
-		Vector<Member> vec = new Vector();
+		Vector<MemberBean> vec = new Vector();
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			conn = DriverManager.getConnection(url, "scott", "tiger");
@@ -105,7 +105,7 @@ public class MembershipService {
 			rs = pstmt.executeQuery();
 			//�ݺ��� ���鼭 ȸ�� ���� ����
 			while(rs.next()) {
-				Member member = new Member();
+				MemberBean member = new MemberBean();
 				member.setAccountnum(rs.getInt(1));
 				member.setPassword(rs.getString(2));
 				member.setEmail(rs.getString(3));

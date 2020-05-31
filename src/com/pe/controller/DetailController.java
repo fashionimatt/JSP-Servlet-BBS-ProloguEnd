@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.pe.dao.Notice;
+import com.pe.bean.NoticeBean;
 import com.pe.service.NoticeService;
 
 @WebServlet("/notice/detail")
@@ -33,7 +33,7 @@ public class DetailController extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 		
 		NoticeService service = new NoticeService();
-		Notice notice = service.getNotice(id);
+		NoticeBean notice = service.getNotice(id);
 		
 		request.setAttribute("n", notice);
 		

@@ -9,22 +9,22 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.pe.dao.Notice;
+import com.pe.bean.NoticeBean;
 
 public class NoticeService {
 	
 	
-	public List<Notice> getNoticeList(){
+	public List<NoticeBean> getNoticeList(){
 		return getNoticeList("title", "", 1);
 	}
 	
-	public List<Notice> getNoticeList(int page){
+	public List<NoticeBean> getNoticeList(int page){
 		return getNoticeList("title", "", page);
 	}
 	
-	public List<Notice> getNoticeList(String field, String query, int page){
+	public List<NoticeBean> getNoticeList(String field, String query, int page){
 		
-		List<Notice> list = new ArrayList<>();
+		List<NoticeBean> list = new ArrayList<>();
 		
 		String sql = "SELECT * FROM (" + 
 				"    SELECT ROWNUM NUM, N.* " + 
@@ -53,7 +53,7 @@ public class NoticeService {
 				String content = rs.getString("content");
 				String files = rs.getString("files");
 				Timestamp regdate = rs.getTimestamp("regdate");
-				Notice notice = new Notice(
+				NoticeBean notice = new NoticeBean(
 						id,
 						title,
 						author,
@@ -116,9 +116,9 @@ public class NoticeService {
 		return count;
 	}
 	
-	public Notice getNotice(int id) {
+	public NoticeBean getNotice(int id) {
 		
-		Notice notice = null;
+		NoticeBean notice = null;
 		
 		String url = "jdbc:oracle:thin:@localhost:1521:harry";
 		
@@ -148,7 +148,7 @@ public class NoticeService {
 				String content = rs.getString("content");
 				String files = rs.getString("files");
 				Timestamp regdate = rs.getTimestamp("regdate");
-				notice = new Notice(
+				notice = new NoticeBean(
 						id,
 						title,
 						author,
@@ -172,9 +172,9 @@ public class NoticeService {
 		return notice;
 	}
 	
-	public Notice getNextNotice(int id) {
+	public NoticeBean getNextNotice(int id) {
 
-		Notice notice = null;
+		NoticeBean notice = null;
 		
 		String sql = "SELECT * FROM NOTICE WHERE ID = (" + 
 				"SELECT ID FROM NOTICE " + 
@@ -201,7 +201,7 @@ public class NoticeService {
 				String content = rs.getString("content");
 				String files = rs.getString("files");
 				Timestamp regdate = rs.getTimestamp("regdate");
-				notice = new Notice(
+				notice = new NoticeBean(
 						id,
 						title,
 						author,
@@ -225,9 +225,9 @@ public class NoticeService {
 		return notice;
 	}
 	
-	public Notice getPrevNotice(int id) {
+	public NoticeBean getPrevNotice(int id) {
 
-		Notice notice = null;
+		NoticeBean notice = null;
 		
 		String sql = "SELECT * FROM NOTICE WHERE ID = (" + 
 				"SELECT ID FROM (SELECT * FROM NOTICE ORDER BY REGDATE DESC) " + 
@@ -254,7 +254,7 @@ public class NoticeService {
 				String content = rs.getString("content");
 				String files = rs.getString("files");
 				Timestamp regdate = rs.getTimestamp("regdate");
-				notice = new Notice(
+				notice = new NoticeBean(
 						id,
 						title,
 						author,
@@ -279,7 +279,7 @@ public class NoticeService {
 	}
 	
 	//�ϳ��� �Խñ��� �����ϴ� �޼ҵ� ȣ��
-	public void insertNotice(Notice notice) {
+	public void insertNotice(NoticeBean notice) {
 		String url = "jdbc:oracle:thin:@localhost:1521:harry";
 		try {
 			//���� �ۼ�
@@ -302,9 +302,9 @@ public class NoticeService {
 	}
 	
 	//��ȸ���� ������Ű�� �ʴ� �ϳ��� �Խñ��� �����޴� �޼ҵ� ȣ��
-	public Notice getUpdateNotice(int id) {
+	public NoticeBean getUpdateNotice(int id) {
 
-		Notice notice = null;
+		NoticeBean notice = null;
 		
 		String url = "jdbc:oracle:thin:@localhost:1521:harry";
 		
@@ -328,7 +328,7 @@ public class NoticeService {
 				String content = rs.getString("content");
 				String files = rs.getString("files");
 				Timestamp regdate = rs.getTimestamp("regdate");
-				notice = new Notice(
+				notice = new NoticeBean(
 						id,
 						title,
 						author,

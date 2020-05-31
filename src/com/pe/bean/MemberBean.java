@@ -1,6 +1,6 @@
-package com.pe.dao;
+package com.pe.bean;
 
-public class Member {
+public class MemberBean {
 
 	private int accountnum;
 	private String password;

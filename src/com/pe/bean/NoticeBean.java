@@ -1,8 +1,8 @@
-package com.pe.dao;
+package com.pe.bean;
 
 import java.sql.Timestamp;
 
-public class Notice {
+public class NoticeBean {
 	private int id;
 	private String title;
 	private Timestamp regdate;
@@ -11,10 +11,10 @@ public class Notice {
 	private String content;
 	private String files;
 	
-	public Notice() {
+	public NoticeBean() {
 	}
 	
-	public Notice(int id, String title, String author, int cnt, String content, String files, Timestamp regdate) {
+	public NoticeBean(int id, String title, String author, int cnt, String content, String files, Timestamp regdate) {
 		this.id = id;
 		this.title = title;
 		this.author = author;
