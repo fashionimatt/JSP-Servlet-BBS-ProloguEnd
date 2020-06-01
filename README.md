@@ -45,19 +45,22 @@ Spring framework를 활용한 개인 프로젝트를 진행하기 전에 JSP/Ser
 ## :computer: 화면 구성
 
 #### 메인 페이지
-<img src="https://user-images.githubusercontent.com/56856085/82248224-bb931c00-9982-11ea-9010-bbe19cf97026.png" width="650">
+<img src="https://user-images.githubusercontent.com/56856085/83376033-dd24e680-a40b-11ea-8b13-1946b3ac70fe.jpg" width="650">
 
-#### Men / Women 페이지
-<img src="https://user-images.githubusercontent.com/56856085/82247147-df556280-9980-11ea-846b-7423a4f8389f.png" width="650">
+#### About 페이지
+<img src="https://user-images.githubusercontent.com/56856085/83376022-da29f600-a40b-11ea-83a3-4ea5ed5b1e65.jpg" width="650">
+
+#### Fashion 페이지
+<img src="https://user-images.githubusercontent.com/56856085/83376031-dc8c5000-a40b-11ea-8678-374bb333ef8b.jpg" width="650">
 
 #### 게시글 상세 페이지
-<img src="https://user-images.githubusercontent.com/56856085/82247155-e1b7bc80-9980-11ea-8ce4-6506d126a802.png" width="650">
+<img src="https://user-images.githubusercontent.com/56856085/83376025-db5b2300-a40b-11ea-93fd-59c625d79936.jpg" width="650">
 
 #### 로그인 페이지
-<img src="https://user-images.githubusercontent.com/56856085/82247138-dc5a7200-9980-11ea-91e8-6a5422f836a2.png" width="650">
+<img src="https://user-images.githubusercontent.com/56856085/83376032-dc8c5000-a40b-11ea-8a86-68aba9dc3208.jpg" width="650">
 
 #### 회원가입 페이지
-<img src="https://user-images.githubusercontent.com/56856085/82247134-dbc1db80-9980-11ea-8d6b-447c4570c530.png" width="650">
+<img src="https://user-images.githubusercontent.com/56856085/83376027-dbf3b980-a40b-11ea-8ebb-5b63c2e8dd42.jpg" width="650">
 
 #### 회원정보 수정 페이지
-<img src="https://user-images.githubusercontent.com/56856085/82247154-e1b7bc80-9980-11ea-95ae-ccf68ca36d3b.png" width="650">
+<img src="https://user-images.githubusercontent.com/56856085/83376034-dd24e680-a40b-11ea-9cb7-12a2ad476ba1.jpg" width="650">
