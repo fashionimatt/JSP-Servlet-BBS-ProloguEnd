@@ -34,12 +34,12 @@ Spring framework를 활용한 개인 프로젝트를 진행하기 전에 JSP/Ser
 ## :page_with_curl: 설계구조
 
 ##### 데이터베이스 모델링
-<img src="https://user-images.githubusercontent.com/56856085/82244954-0ca01180-997d-11ea-8c1a-fd9a96930e03.jpg" width="650">
+<img src="https://user-images.githubusercontent.com/56856085/83375810-11e46e00-a40b-11ea-83f1-101fff5f5fb1.jpg" width="650">
 
 ##### 패키지 구조
 <div>
- <img height="700" src="https://user-images.githubusercontent.com/56856085/82245099-4cff8f80-997d-11ea-8621-a9c749f93586.jpg")>
- <img height="700" src="https://user-images.githubusercontent.com/56856085/82245447-eb8bf080-997d-11ea-8f6d-0faa6821dfab.jpg")>
+ <img height="700" src="https://user-images.githubusercontent.com/56856085/83375812-1446c800-a40b-11ea-8c8e-a56a9c18a09f.jpg")>
+ <img height="700" src="https://user-images.githubusercontent.com/56856085/83375813-14df5e80-a40b-11ea-9d0c-565f034d6e7d.jpg")>
 </div>
 
 ## :computer: 화면 구성
